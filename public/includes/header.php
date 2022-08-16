@@ -1,10 +1,7 @@
-<?php 
+<?php
   // include_once '../config.php';
   // $config = new Config();
-  // include_once '../classes/Database.php';
-  // $pagetitle = "Home";
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,4 +11,6 @@
   <title><?=$pagetitle?> | <?= $config::APPLICATIONNAME ?></title>
 </head>
 <body>
-  
+<?php 
+  include_once 'navbar.php';
+?>  
