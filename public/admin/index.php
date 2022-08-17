@@ -3,6 +3,7 @@
   include_once '../../config.php';
   $config = new Config();
   include_once '../includes/header.php';
+  include_once 'secure.php';
   echo 
     "<div class='container'>".
     "<H1>".$pagetitle."</H1>".

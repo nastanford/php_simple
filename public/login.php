@@ -4,19 +4,18 @@
   $pagetitle = "Login";
   include_once 'includes/header.php';
 ?>
-
 <div class="container-fluid">
   <div class="row">
     <div class="col-4"></div>
     <div class="col-4 mt-5">
       <main class="form-signin">
-        <form>
+        <form action="act_login.php" method="post">
           <div class="form-floating">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="jsample@test.com">
+            <input type="email" name="email" class="form-control" id="floatingInput" placeholder="name@example.com" value="jsample@test.com">
             <label for="floatingInput">Email address</label>
           </div>
           <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" value="password">
+            <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password" value="password">
             <label for="floatingPassword">Password</label>
           </div>
           <div class="checkbox mb-3">

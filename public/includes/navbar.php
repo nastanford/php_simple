@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/index.php">Simple Php </a>
@@ -13,13 +12,25 @@
         <li class="nav-item">
           <a class="nav-link" href="/customers.php">Customers</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/admin/index.php">Admin</a>
-        </li>
+        <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){?>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/index.php">Admin</a>
+          </li>
+        <?php } ?>
       </ul>
-      <form action="/login.php" method="post" class="d-flex">
-        <button class="btn btn-primary" type="submit">Login</button>
-      </form> 
+      <?php
+        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+        {
+          // echo session email
+
+          echo "<span class='me-2 text-light'>".$_SESSION['email']."</span>";
+          echo "<a class='btn btn-outline-success' href='/act_logout.php'>Logout</a>";
+        }
+        else
+        {
+          echo "<a class='btn btn-outline-success' href='/login.php'>Login</a>";
+        }
+      ?>
     </div>
   </div>
 </nav>
