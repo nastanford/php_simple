@@ -3,14 +3,9 @@
   $config = new Config();
   $pagetitle = "Home";
   include_once 'includes/header.php';
-?>
-
-<div class="container">
-<?php
-  echo "<H1>".$pagetitle."</H1>";
-?>
-</div>
-
-<?php
+  echo 
+    "<div class='container'>".
+    "<H1>".$pagetitle."</H1>".
+    "</div>";
   include_once 'includes/footer.php';
 ?>
