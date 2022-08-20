@@ -1,6 +1,6 @@
 <?php
   $pagetitle = "Customers";
-  include_once '../queries/qry_customers.php';
+  include_once './queries/qry_customers.php';
   include_once 'includes/header.php';
   echo "<div class='container'>";
   echo "<H1>".$pagetitle."</H1>";

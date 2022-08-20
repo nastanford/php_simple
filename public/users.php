@@ -1,7 +1,7 @@
 <?php
   $pagetitle = "Users";
-  // include_once '../config.php';
-  include_once '../queries/qry_users.php';
+
+  include_once './queries/qry_users.php';
 
   include_once 'includes/header.php';
   echo "<div class='container'>";

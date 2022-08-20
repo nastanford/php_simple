@@ -1,6 +1,6 @@
 <?php
   session_start();
-  include_once '../classes/users.php';
+  include_once './classes/users.php';
   $results = new Users();
   $user = $results->checkLogin($_POST['email'],$_POST['password']);
   if($user){

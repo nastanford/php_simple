@@ -18,11 +18,26 @@
           echo '<li class="nav-item">';
           echo '<a class="nav-link" href="/customers.php">Customers</a>';
           echo '</li>';
-          echo '<li class="nav-item">';
-          echo '<a class="nav-link" href="/admin/index.php">Admin</a>';
-          echo '</li>';
+        ?>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/admin/users/index.php">Users</a></li>
+            <li><a class="dropdown-item" href="/admin/customers/index.php">Customers</a></li>
+            <!-- 
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            -->
+          </ul>
+        </li>
+        
+        <?php
         }                
         echo '</ul>';
+
+
         if(isset($_SESSION['user']) and  count($_SESSION['user']) == 1)
         {
           echo "<span class='me-2 text-light'>".$_SESSION['user'][0]['firstname']." ".$_SESSION['user'][0]['lastname']."</span>";
