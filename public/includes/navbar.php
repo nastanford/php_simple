@@ -10,8 +10,13 @@
           <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/users.php">Users</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/customers.php">Customers</a>
         </li>
+
+
         <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){?>
           <li class="nav-item">
             <a class="nav-link" href="/admin/index.php">Admin</a>

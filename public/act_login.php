@@ -13,7 +13,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
     // redirect to admin page
     // echo "Logged in";
     // var_dump($_SESSION);
-    header('Location: index.php');
+    //  header('Location: index.php');
   }
   else
   {
