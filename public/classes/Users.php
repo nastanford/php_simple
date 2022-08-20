@@ -37,7 +37,7 @@
     
     public function getAll() 
     {
-      $sql = "SELECT * FROM users";
+      $sql = "SELECT * FROM users order by lastname, firstname";
       $stmt = $this->connect()->prepare($sql);
       $stmt->execute();
       $results = $stmt->fetchAll();

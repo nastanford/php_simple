@@ -41,11 +41,11 @@
         if(isset($_SESSION['user']) and  count($_SESSION['user']) == 1)
         {
           echo "<span class='me-2 text-light'>".$_SESSION['user'][0]['firstname']." ".$_SESSION['user'][0]['lastname']."</span>";
-          echo "<a class='btn btn-outline-success' href='/act_logout.php'>Logout</a>";
+          echo "<a class='btn btn-primary' href='/act_logout.php'>Logout</a>";
         }
         else
         {
-          echo "<a class='btn btn-outline-success' href='/login.php'>Login</a>";
+          echo "<a class='btn btn-primary' href='/login.php'>Login</a>";
         }
       ?>
     </div>

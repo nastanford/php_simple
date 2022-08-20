@@ -1,18 +1,25 @@
-<?php 
+<?php
   $pagetitle = "Users";
   include_once $_SERVER['DOCUMENT_ROOT'].'/queries/qry_users.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
-  include_once $_SERVER['DOCUMENT_ROOT'].'/admin/secure.php';
-  echo 
-    "<div class='container'>".
-    "<H1>".$pagetitle."</H1>".
-    "</div>";
-?>
-<div class="row">
-  <div class="col-2 ms-2">
-    Users
-  </div>
-</div>
-<?php
+
+  echo "<div class='container'>";
+  echo "<H1>".$pagetitle."</H1>";
+  $userCount=count($users);
+  echo '<table class="table table-striped">';
+  echo '<thead><tr><th>First Name</th><th>Last Name</th></tr></thead><tbody>';
+  for($i=0;$i<$userCount;$i++)
+  {
+    echo '<tr>';
+    echo '<td>'.$users[$i]['firstname'].'</td>';
+    echo '<td>'.$users[$i]['lastname'].'</td>';
+    echo '</tr>';
+  }
+  echo '</table></tbody></div>';
+  echo '</div>';
+
+
   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
 ?>
+
+

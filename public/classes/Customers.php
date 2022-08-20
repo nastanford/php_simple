@@ -19,7 +19,7 @@ class Customers extends Database
   
   public function getAll() 
   {
-    $sql = "SELECT * FROM customers";
+    $sql = "SELECT * FROM customers order by lastname, firstname";
     $stmt = $this->connect()->prepare($sql);
     $stmt->execute();
     $results = $stmt->fetchAll();
