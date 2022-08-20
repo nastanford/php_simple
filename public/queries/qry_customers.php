@@ -1,5 +1,5 @@
 <?php
-  include_once './classes/customers.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/classes/customers.php';
   $results = new Customers();
   $customers = $results->getAll();
 ?>

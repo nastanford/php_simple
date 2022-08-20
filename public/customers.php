@@ -1,7 +1,7 @@
 <?php
   $pagetitle = "Customers";
-  include_once './queries/qry_customers.php';
-  include_once 'includes/header.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/queries/qry_customers.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   echo "<div class='container'>";
   echo "<H1>".$pagetitle."</H1>";
 
@@ -13,5 +13,5 @@
     $customers[$i]['lastname'];  
   }
   echo "</div>";
-  include_once 'includes/footer.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
 ?>

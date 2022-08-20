@@ -11,7 +11,7 @@
 ?>
 <div class="row">
   <div class="col-2 ms-2">
-    Test
+    
   </div>
 </div>
 <?php

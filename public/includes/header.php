@@ -1,6 +1,5 @@
 <?php 
   session_start();
-  $APPLICATIONNAME = 'php simple';
 ?>
 <!DOCTYPE html>
 <html lang="en">

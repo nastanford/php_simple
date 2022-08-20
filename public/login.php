@@ -2,7 +2,7 @@
   include_once '../config.php';
   $config = new Config();
   $pagetitle = "Login";
-  include_once 'includes/header.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 ?>
 <div class="container-fluid">
   <div class="row">
@@ -25,5 +25,5 @@
   </div>
 </div>
 <?php
-  include_once 'includes/footer.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
 ?>

@@ -1,6 +1,5 @@
 <?php
-  include_once './classes/Database.php';
-
+  include_once $_SERVER['DOCUMENT_ROOT'].'/classes/Database.php';
 class Customers extends Database
 {
   // constructor
