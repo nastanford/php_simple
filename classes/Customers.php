@@ -1,4 +1,5 @@
 <?php
+  include_once '../classes/Database.php';
 
 class Customers extends Database
 {
@@ -26,5 +27,4 @@ class Customers extends Database
     return $results;
   }
 }
-
 ?>

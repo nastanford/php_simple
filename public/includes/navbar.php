@@ -5,30 +5,27 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/users.php">Users</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/customers.php">Customers</a>
-        </li>
-
-
-        <?php if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){?>
-          <li class="nav-item">
-            <a class="nav-link" href="/admin/index.php">Admin</a>
-          </li>
-        <?php } ?>
-      </ul>
       <?php
-        if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true)
+        echo '<ul class="navbar-nav me-auto mb-2 mb-lg-0">';
+        echo '<li class="nav-item">';
+        echo '<a class="nav-link active" aria-current="page" href="/index.php">Home</a>';
+        echo '</li>';
+        if(isset($_SESSION['user']) and  count($_SESSION['user']) == 1)
         {
-          // echo session email
-
-          echo "<span class='me-2 text-light'>".$_SESSION['email']."</span>";
+          echo '<li class="nav-item">';
+          echo '<a class="nav-link" href="/users.php">Users</a>';
+          echo '</li>';
+          echo '<li class="nav-item">';
+          echo '<a class="nav-link" href="/customers.php">Customers</a>';
+          echo '</li>';
+          echo '<li class="nav-item">';
+          echo '<a class="nav-link" href="/admin/index.php">Admin</a>';
+          echo '</li>';
+        }                
+        echo '</ul>';
+        if(isset($_SESSION['user']) and  count($_SESSION['user']) == 1)
+        {
+          echo "<span class='me-2 text-light'>".$_SESSION['user'][0]['firstname']." ".$_SESSION['user'][0]['lastname']."</span>";
           echo "<a class='btn btn-outline-success' href='/act_logout.php'>Logout</a>";
         }
         else

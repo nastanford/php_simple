@@ -1,4 +1,5 @@
 <?php
+  include_once '../classes/Database.php';
 
 class Users extends Database
 {
@@ -8,7 +9,7 @@ class Users extends Database
 
   }
 
-  public function getUser($email,$password) 
+  public function checkLogin($email,$password) 
   {
     $sql = "SELECT * FROM users WHERE email = ? and password = ?";
     $stmt = $this->connect()->prepare($sql);
@@ -17,7 +18,16 @@ class Users extends Database
     return $results;
   }
 
-  public function getUserByID($id) 
+  public function getUser($firstname,$lastname,$email) 
+  {
+    $sql = "SELECT * FROM users WHERE firstname like ? and lastname like ? and email like ?";
+    $stmt = $this->connect()->prepare($sql);
+    $stmt->execute([$firstname,$lastname,$email]);
+    $results = $stmt->fetchAll();
+    return $results;
+  }
+
+  public function getByID($id) 
   {
     $sql = "SELECT * FROM users WHERE id = ?";
     $stmt = $this->connect()->prepare($sql);
@@ -35,5 +45,4 @@ class Users extends Database
     return $results;
   }
 }
-
 ?>
