@@ -13,10 +13,10 @@
         if(isset($_SESSION['user']) and  count($_SESSION['user']) == 1)
         {
           echo '<li class="nav-item">';
-          echo '<a class="nav-link" href="/users.php">Users</a>';
+          echo '<a class="nav-link" href="/users/index.php">Users</a>';
           echo '</li>';
           echo '<li class="nav-item">';
-          echo '<a class="nav-link" href="/customers.php">Customers</a>';
+          echo '<a class="nav-link" href="/customers/index.php">Customers</a>';
           echo '</li>';
         ?>
         <li class="nav-item dropdown">
