@@ -1,6 +1,6 @@
 <?php 
   $pagetitle = "Admin";
-  include_once $_SERVER['DOCUMENT_ROOT'].'/classes/users.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/../classes/users.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/admin/secure.php';
   echo 

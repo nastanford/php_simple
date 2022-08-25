@@ -1,5 +1,5 @@
 <?php
-  $configPath = str_replace('/public','',$_SERVER['DOCUMENT_ROOT']).'/Config.php';
+  $configPath = $_SERVER['DOCUMENT_ROOT'].'/../Config.php';
   include $configPath;
   $config = new Config();
 

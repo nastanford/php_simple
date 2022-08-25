@@ -1,6 +1,6 @@
 <?php
   $pagetitle = "Customer";
-  include_once $_SERVER['DOCUMENT_ROOT'].'/queries/qry_customers.php';
+  include_once $_SERVER['DOCUMENT_ROOT'].'/../queries/qry_customers.php';
   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/header.php';
 
   echo "<div class='container'>";
