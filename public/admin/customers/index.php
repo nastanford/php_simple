@@ -15,7 +15,7 @@
     echo '<td>'.$customers[$i]['lastname'].'</td>';
     echo '<td class="text-center"><a href="act_delete.php?id='.$customers[$i]['id'].'">x</a></td></tr>';
   }
-  echo '</table></tbody></div>';
+  echo '</tbody></table></div>';
   echo '</div>';
   include_once $_SERVER['DOCUMENT_ROOT'].'/includes/footer.php';
 ?>
