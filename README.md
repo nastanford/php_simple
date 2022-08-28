@@ -1,5 +1,5 @@
 # php_simple
-Trying to just build a simple framework with as little code as possible
+Trying to just build a simple framework with as little code as possible. If you want to help let me know.
 
 ## File: httpd-vhosts.conf 
 ```
